@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>TypeFlow</title>
+</head>
+
+<body>
+  <header>  
+    <h1>Write the paragraph.</h1>
+  </header>
+  <main>
+    <section id="para" style="grid-area: box1;">
+      <form>
+        <label class="tog" for="in" id="inp"></label>
+        <textarea class="tog" id="in" cols="30" rows="10"></textarea>
+      </form>
+    </section>
+    <section id="inf" style="grid-area: box2;">
+      <p id="lpm">Letters per minutes: 0 lpm</p>
+      <p id="accu">Accuracy: 0%</p>
+      <p id="time">Time: 0 s</p>
+      <button id="refresh">Refresh</button>
+      </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
