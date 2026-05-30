@@ -59,59 +59,72 @@ let v29 = "Architecture is the art and science of designing buildings and struct
 let v30 = "Transportation systems have evolved from walking and animal-powered carts to high-speed trains, airplanes, and electric vehicles. This evolution has made travel faster, cheaper, and more accessible. Future transportation may include autonomous vehicles and even flying taxis, changing how humans move across cities and countries.";
 
 let btn = document.getElementById("refresh"); 
-let lbl = document.getElementById("inp");
-let txt = document.getElementById("in");
+let lbl = document.getElementById("label");
+let txt = document.getElementById("txt-area");
 let lpm = document.getElementById("lpm");
-let acc = document.getElementById("accu");
+let accuracy = document.getElementById("accuracy");
 let time = document.getElementById("time");
-let paraa = [v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,v27,v28,v29,v30]
+let array = [v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,v27,v28,v29,v30]
+let mistakes = document.getElementById("mistake");
 let guess;
 let para;
 let startTime;
-let intv;
+let interval;
 let userAtChar;
-let m;
-let diff;
+let mistake;
+let differentChars;
 let result;
-let llppmm
+let newLpm;
+
 function rans() {
-  clearInterval(intv)
+  clearInterval(interval)
   txt.value = ""
-  m = 0
+  txt.style.border = "0.3rem solid rgba(255,255,255,0.5)"
+  mistake = 0
   time.textContent = "Time: 0 s"
-  acc.textContent = "Accuracy: 0%"
+  accuracy.textContent = "Accuracy: 0%"
   lpm.textContent = "Letters per minutes: 0 lpm"
   lbl.style.color = ""
-  txt.style.border =""
   guess = Math.floor(Math.random() * 30)
-  para = paraa[guess]
+  para = array[guess]
   lbl.textContent = para
 }
 btn.onclick = rans;
 rans();
-m = 0;
+mistake = 0;
 function inf() {
   userAtChar = txt.value.length - 1
   
+  // setting interval
   if(txt.value.length === 1 ){
-    clearInterval(intv)
+    clearInterval(interval)
     startTime = 0
-    intv = setInterval( () => {
+    interval = setInterval( () => {
       startTime += 0.01
       time.textContent = "Time: " + startTime.toFixed(2) + " s";
     },10)
  }
+ 
+  // finding mistakes
+  if(txt.value[userAtChar] !== lbl.textContent[userAtChar]){
+    txt.style.border = "0.3rem solid rgba(255,0,0,0.1)"
+  }else{
+    txt.style.border = "0.3rem solid rgba(0,255,0,0.1)"
+  }
   
-  if(txt.value[userAtChar] !== lbl.textContent[userAtChar]){ m++}
-  
+  // final calculation
   if(txt.value.length === para.length){
-    clearInterval(intv)
-    diff = (a, b) => [...a].filter((c, i) => c !== b[i]).length;
-    m += diff(txt.value, para)
-    result = (( para.length - m) / lbl.textContent.length) * 100 
-    acc.textContent = "Accuracy: " + result.toFixed(2) + "%"
-    llppmm = (txt.value.length / startTime) * 60
-    lpm.textContent = "Letters per minutes: " + llppmm.toFixed(1) +
+    clearInterval(interval)
+    
+    // calculating accuracy 
+    differentChars = (a, b) => [...a].filter((c, i) => c !== b[i]).length;
+    mistake = differentChars(txt.value, para)
+    result = (( para.length - mistake) / lbl.textContent.length) * 100 
+    accuracy.textContent = "Accuracy: " + result.toFixed(2) + "%"
+    
+    // calculating lpm
+    newLpm = (txt.value.length / startTime) * 60
+    lpm.textContent = "Letters per minutes: " + newLpm.toFixed(1) +
       " lpm"
     
   }
