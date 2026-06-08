@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>TypeFlow</title>
+</head>
+
+<body>
+  <header>
+    <h1><span id="type">Type</span><span id="flow">Flow</span></h1>
+  </header>
+  <main>
+    <section id="paragraph">
+      <form>
+        <label class="input" for="txt-area" id="label"></label>
+        <textarea class="input" id="txt-area" ></textarea>
+      </form>
+      <div class= "inf" id="lpm-container">
+        <p class="variable">Speed</p>
+        <p class="digit"><span class="num" id="lpm">-</span> lpm</p>
+      </div>
+      <div class="inf"  id="accuracy-container">
+        <p class="variable">Accuracy</p>
+        <p class="digit"><span class="num" id="accuracy">-</span> %</p>
+      </div>
+      <div class="inf" id="time-container">
+        <p class="variable">Time</p>
+        <p class="digit"><span class="num" id="time">-</span> s</p>
+      </div>
+      <div id="refresh-container" class="inf"><button id="refresh">Refresh</button></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
