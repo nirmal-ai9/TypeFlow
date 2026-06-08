@@ -65,7 +65,6 @@ let lpm = document.getElementById("lpm");
 let accuracy = document.getElementById("accuracy");
 let time = document.getElementById("time");
 let array = [v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,v27,v28,v29,v30]
-let mistakes = document.getElementById("mistake");
 let guess;
 let para;
 let startTime;
@@ -75,16 +74,18 @@ let mistake;
 let differentChars;
 let result;
 let newLpm;
+let isCompleted;
 
 function rans() {
   clearInterval(interval)
+  isCompleted = false
   txt.value = ""
-  txt.style.border = "0.3rem solid rgba(255,255,255,0.5)"
   mistake = 0
-  time.textContent = "Time: 0 s"
-  accuracy.textContent = "Accuracy: 0%"
-  lpm.textContent = "Letters per minutes: 0 lpm"
-  lbl.style.color = ""
+  txt.style.border = "none"
+  lbl.style.border = "none"
+  time.textContent = `-`
+  lpm.textContent = `-`
+  accuracy.textContent = `-`
   guess = Math.floor(Math.random() * 30)
   para = array[guess]
   lbl.textContent = para
@@ -101,32 +102,35 @@ function inf() {
     startTime = 0
     interval = setInterval( () => {
       startTime += 0.01
-      time.textContent = "Time: " + startTime.toFixed(2) + " s";
+      time.textContent = startTime.toFixed(2);
     },10)
  }
  
   // finding mistakes
   if(txt.value[userAtChar] !== lbl.textContent[userAtChar]){
-    txt.style.border = "0.3rem solid rgba(255,0,0,0.1)"
+    txt.style.border = "0.3rem solid rgba(255,0,0,0.5)"
+    lbl.style.border = "0.3rem solid rgba(255,0,0,0.5)"
   }else{
-    txt.style.border = "0.3rem solid rgba(0,255,0,0.1)"
+    txt.style.border = "0.3rem solid rgba(0,255,0,0.5)"
+    lbl.style.border = "0.3rem solid rgba(0,255,0,0.5)"
+  }
+  
+  if(isCompleted === false){
+    // calculating accuracy 
+    differentChars = (a, b) => [...a].filter((c, i) => c !== b[i]).length;
+    mistake = differentChars(txt.value, para.slice(0, txt.value.length));
+    result = (( txt.value.length - mistake) / txt.value.length) * 100 ;
+    accuracy.textContent = result.toFixed(2)
+    
+    // calculating lpm
+    newLpm = (txt.value.length / startTime) * 60
+    lpm.textContent = newLpm.toFixed(1)
   }
   
   // final calculation
   if(txt.value.length === para.length){
     clearInterval(interval)
-    
-    // calculating accuracy 
-    differentChars = (a, b) => [...a].filter((c, i) => c !== b[i]).length;
-    mistake = differentChars(txt.value, para)
-    result = (( para.length - mistake) / lbl.textContent.length) * 100 
-    accuracy.textContent = "Accuracy: " + result.toFixed(2) + "%"
-    
-    // calculating lpm
-    newLpm = (txt.value.length / startTime) * 60
-    lpm.textContent = "Letters per minutes: " + newLpm.toFixed(1) +
-      " lpm"
-    
+    isCompleted = true
   }
 }
 txt.addEventListener("input", inf)
