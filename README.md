@@ -1,113 +1,122 @@
-# TypeFlow ⌨️
+## TypeFlow ⌨️
 
-A clean and responsive typing speed test web app built using pure HTML, CSS, and JavaScript.  
-TypeFlow helps users improve typing speed and accuracy by practicing random paragraphs in real time.
+A modern typing speed test built using pure HTML, CSS, and JavaScript.
 
----
-
-## ✨ Features
-
-- Random paragraph generator
-- Real-time typing accuracy checker
-- Letters Per Minute (LPM) counter
-- Live timer
-- Refresh button for new paragraphs
-- Responsive UI
-- Pure vanilla JavaScript (no frameworks)
+TypeFlow helps users improve their typing speed and accuracy by providing randomly selected paragraphs, real-time performance metrics, and a clean responsive interface.
 
 ---
 
-## 📸 Preview
+## Features
 
-TypeFlow displays a paragraph and tracks:
+# Welcome Screen
 
-- ⏱ Time taken
-- 🎯 Accuracy
-- ⚡ Typing speed (LPM)
+- Animated typing intro
+- Color-changing loading indicator
+- Automatic transition to the dashboard
+
+# Typing Test
+
+- Random paragraph generation
+- 30 unique paragraphs
+- Real-time typing feedback
+- Visual correctness indicators
+
+# Performance Metrics
+
+- Live Letters Per Minute (LPM)
+- Live Accuracy Percentage
+- Live Timer
+- Automatic result calculation
+
+# User Interface
+
+- Responsive design for mobile and desktop
+- Modern dark theme
+- Neon-style metric cards
+- Smooth hover animations
+- Clean grid-based layout
 
 ---
 
-## 🛠 Technologies Used
+# Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (Vanilla)
+
+No frameworks or libraries were used.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-```txt
 TypeFlow/
 │
-├── index.html
-├── style.css
-├── script.js
+├── index.html          # Welcome screen
+├── dashboard.html      # Main typing test
+├── style.css           # Dashboard styling
+├── script.js           # Typing test logic
 └── README.md
-```
 
 ---
 
-## 🚀 How to Run
+## How It Works
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/nirmal-ai9/TypeFlow.git
-```
-
-### 2. Open the project folder
-
-```bash
-cd TypeFlow
-```
-
-### 3. Run the app
-
-Open `index.html` in your browser.
+1. User lands on the welcome screen.
+2. Animated text introduces the application.
+3. User is redirected to the dashboard.
+4. A random paragraph is selected.
+5. Timer starts when the first character is typed.
+6. Accuracy and LPM update in real time.
+7. Test ends when the paragraph is completed.
+8. User can refresh for a new challenge.
 
 ---
 
-## ⚙️ How It Works
+## Metrics Formula
 
-- A random paragraph is selected from the paragraph array
-- Timer starts when the user types the first character
-- Accuracy is calculated by comparing typed text with the original paragraph
-- LPM is calculated using:
+Accuracy
 
-```txt
-(total letters typed / total time) × 60
-```
+Accuracy = ((Typed Characters - Mistakes) / Typed Characters) × 100
 
----
+Letters Per Minute (LPM)
 
-## 🎨 UI Features
-
-- Gradient heading text
-- Clean minimal layout
-- Responsive typography
-- Transparent typing overlay effect
+LPM = (Typed Characters / Time in Seconds) × 60
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
-- Add Words Per Minute (WPM)
-- Dark mode
+- Character-by-character highlighting
+- WPM support
 - Difficulty levels
-- Mobile optimization
-- Mistake highlighting
+- Personal best tracking
+- Local storage integration
+- User statistics dashboard
 - Sound effects
-- Typing history/statistics
+- Custom paragraph selection
 
 ---
 
-## 📜 License
+## Screenshots
 
-This project is open source and free to use.
+Add screenshots here after deployment.
+
+/screenshots
+├── welcome-screen.png
+├── dashboard.png
+└── results.png
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-Made by Nirmal 😎
+# Nirmal
+
+Built as a personal project to practice web development and improve JavaScript, CSS Grid, responsive design, and DOM manipulation skills.
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
