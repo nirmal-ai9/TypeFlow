@@ -1,4 +1,4 @@
-## TypeFlow ⌨️
+# TypeFlow ⌨️
 
 A modern typing speed test built using pure HTML, CSS, and JavaScript.
 
@@ -6,29 +6,29 @@ TypeFlow helps users improve their typing speed and accuracy by providing random
 
 ---
 
-## Features
+# Features
 
-# Welcome Screen
+## Welcome Screen
 
 - Animated typing intro
 - Color-changing loading indicator
 - Automatic transition to the dashboard
 
-# Typing Test
+## Typing Test
 
 - Random paragraph generation
 - 30 unique paragraphs
 - Real-time typing feedback
 - Visual correctness indicators
 
-# Performance Metrics
+## Performance Metrics
 
 - Live Letters Per Minute (LPM)
 - Live Accuracy Percentage
 - Live Timer
 - Automatic result calculation
 
-# User Interface
+## User Interface
 
 - Responsive design for mobile and desktop
 - Modern dark theme
@@ -48,7 +48,7 @@ No frameworks or libraries were used.
 
 ---
 
-## Project Structure
+# Project Structure
 
 TypeFlow/
 │
@@ -60,7 +60,7 @@ TypeFlow/
 
 ---
 
-## How It Works
+# How It Works
 
 1. User lands on the welcome screen.
 2. Animated text introduces the application.
@@ -73,7 +73,7 @@ TypeFlow/
 
 ---
 
-## Metrics Formula
+# Metrics Formula
 
 Accuracy
 
@@ -85,7 +85,7 @@ LPM = (Typed Characters / Time in Seconds) × 60
 
 ---
 
-## Future Improvements
+# Future Improvements
 
 - Character-by-character highlighting
 - WPM support
@@ -98,25 +98,14 @@ LPM = (Typed Characters / Time in Seconds) × 60
 
 ---
 
-## Screenshots
+# Author
 
-Add screenshots here after deployment.
-
-/screenshots
-├── welcome-screen.png
-├── dashboard.png
-└── results.png
-
----
-
-## Author
-
-# Nirmal
+## Nirmal
 
 Built as a personal project to practice web development and improve JavaScript, CSS Grid, responsive design, and DOM manipulation skills.
 
 ---
 
-## License
+# License
 
 This project is open-source and available under the MIT License.
