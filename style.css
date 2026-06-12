@@ -4,8 +4,13 @@
 
 header{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
+  color: white;
+}
+#heading{
+  font-size: 1.5rem;
 }
 h1{
   display: inline-block;
@@ -52,7 +57,8 @@ html{
   "inp inp inp speed"
   "inp inp inp acc"
   "inp inp inp time"
-  "inp inp inp btn";
+  "inp inp inp btn"
+  "prog prog prog prog" ;
 }
 
 /*left side */
@@ -73,12 +79,12 @@ form{
   padding: 0;
   margin: 0;
 }
-label{
+#label{
   background: rgba(255,255,255, 0.1);
   color: gray;
   z-index: 1;
 }
-textarea{
+#txt-area{
   outline: none;
   color: white;
   background: transparent;
@@ -114,7 +120,9 @@ textarea{
   height: 100%;
   border-radius: 1rem 0 0 1rem;
 }
-
+.num{
+  color: white;
+}
 p{
   margin: 0;
 }
@@ -177,6 +185,49 @@ p{
   border-radius: 0;
 }
 
+/* progress bar */
+
+#progress-container{
+  grid-area: prog;
+  padding: 0;
+  min-height: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: "bar bar bar bar bar num";
+}
+#bar-container{
+  grid-area: bar;
+}
+#num-container{
+  grid-area: num;
+}
+.progress{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bar-border{
+  border: 0.2rem solid gray;
+  width: 95%;
+  height: 1.5rem;
+  border-radius: 1rem;
+  padding: 0;
+}
+#bar{
+  height: 100%;
+  border-radius: 1rem;
+  background: blue;
+  width: 0%;
+  transition: 0.2s;
+}
+#num{
+  color: white;
+  font-size: 1.6rem;
+  width: 80%;
+  line-height: 1.5;
+}
+
 /* media queries */
 
 @media (max-width: 624px) {
@@ -195,6 +246,7 @@ p{
     "acc"
     "time"
     "btn"
+    "prog"
     ;
   }
 }
@@ -202,5 +254,8 @@ p{
 @media (min-width: 1024px) {
   html{
     font-size: 20px;
+  }
+  .inf{
+    min-height: 3rem;
   }
 }
