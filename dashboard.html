@@ -2,15 +2,18 @@
 <html>
 
 <head>
+  <title>TypeFlow - Free Online Typing Test</title>
+  <meta name="description"
+  content="Take a free typing test with TypeFlow. Measure typing speed, accuracy and improve keyboard skills.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <title>TypeFlow</title>
 </head>
 
 <body>
   <header>
     <h1><span id="type">Type</span><span id="flow">Flow</span></h1>
+    <p id="heading">Practice typing online and improve your typing speed and accuracy.</p>
   </header>
   <main>
     <section id="paragraph">
@@ -18,7 +21,7 @@
         <label class="input" for="txt-area" id="label"></label>
         <textarea class="input" id="txt-area" ></textarea>
       </form>
-      <div class= "inf" id="lpm-container">
+      <div class="inf" id="lpm-container">
         <p class="variable">Speed</p>
         <p class="digit"><span class="num" id="lpm">-</span> lpm</p>
       </div>
@@ -30,7 +33,18 @@
         <p class="variable">Time</p>
         <p class="digit"><span class="num" id="time">-</span> s</p>
       </div>
-      <div id="refresh-container" class="inf"><button id="refresh">Refresh</button></div>
+      <div title="Ctrl + r" id="refresh-container" class="inf">
+        <button id="refresh" title="Ctrl + r">Refresh</button></div>
+      <div id="progress-container">
+        <div class="progress" id="bar-container">
+          <div id="bar-border">
+            <p id="bar"></p>
+          </div>
+        </div>
+        <div class="progress" id="num-container">
+          <p id="num"><span id="digit">-</span> %</p>
+        </div>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>
