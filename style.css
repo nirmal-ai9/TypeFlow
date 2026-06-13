@@ -95,7 +95,7 @@ form{
 /* right side */
 
 .inf{
-  min-height: rem;
+  min-height: 5rem;
   overflow: visible;
   border-radius: 0 1rem 1rem 0;
   padding: 0 1rem;
