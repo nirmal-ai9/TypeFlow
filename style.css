@@ -95,7 +95,7 @@ form{
 /* right side */
 
 .inf{
-  min-height: 5rem;
+  min-height: rem;
   overflow: visible;
   border-radius: 0 1rem 1rem 0;
   padding: 0 1rem;
@@ -110,7 +110,7 @@ form{
 }
 .inf:hover{
   transform: scale(1.05);
-  background: rgba(255,255,255, 0.05);
+  background: rgba(255,255,255, 0.2);
 }
 .inf:before {
   top: 0;
