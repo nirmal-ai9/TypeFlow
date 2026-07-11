@@ -1,1 +1,66 @@
+/* SVG defs via CSS */
+.kb-body {
+  fill: var(--kb-body);
+  stroke: #2a2a34;
+  stroke-width: 1.5;
+}
 
+.kb-inner-bevel {
+  fill: none;
+  stroke: rgba(255,255,255,0.035);
+  stroke-width: 1;
+}
+
+.key {
+  fill: var(--key-base);
+  stroke: var(--key-stroke);
+  stroke-width: 1;
+  transition: fill 0.08s ease, filter 0.08s ease;
+  cursor: pointer;
+}
+
+.key-face {
+  fill: var(--key-top);
+  stroke: none;
+  transition: fill 0.08s ease;
+}
+
+.key-shine {
+  fill: var(--key-highlight);
+  stroke: none;
+  pointer-events: none;
+}
+
+.label {
+  fill: var(--label);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+  transition: fill 0.08s ease;
+}
+
+.label.small {
+  font-size: 9px;
+  letter-spacing: 0.05em;
+}
+
+/* Active state */
+.key.active {
+  fill: var(--pressed-fill) !important;
+  filter:
+    drop-shadow(0 0 6px var(--accent-glow))
+    drop-shadow(0 0 18px var(--accent-glow));
+}
+
+.key.active + .key-face {
+  fill: #2a2a40 !important;
+}
+
+/* Glow label when active — handled via JS */
+.label.active {
+  fill: var(--accent) !important;
+}
