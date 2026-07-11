@@ -1,1 +1,55 @@
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.fade-up.show{
+  opacity: 1;
+  transform: translateY(0);
+}
 
+#icon, .inf{
+  transition: transform .25s ease;
+}
+#refresh:hover {
+  transform: rotate(90deg);
+}
+.inf:hover {
+  transform: translateY(-4px);
+}
+#progress-container svg{
+  transform: rotate(-90deg);
+}
+.progress{
+  transition: stroke-dashoffset .5s ease;
+}
+form{
+  transition:
+    width .8s ease,
+    height .5s ease,
+    transform .8s ease;
+}
+
+.fade-out{
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-out.done{
+  opacity: 0;
+  transform: translateY(-50px) scale(0.97);
+}
+
+.status-dot.live {
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
