@@ -1,1 +1,238 @@
+/* section 2 */
 
+#typing-area {
+  position: relative;
+  height: auto;
+  padding: 2rem;
+  width: 100vw;
+}
+.bg{
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2.4rem;
+  box-shadow:
+  0 8px 32px rgba(0,0,0,0.08),
+  inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+/* p*/
+
+#s-p{
+  height: 5rem;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* button */
+
+#refresh{
+  margin: 0;
+  transition: 0.5s;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  height: 5rem;
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+#svg-container{
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+#icon{
+  width: 75%;
+  height: 75%;
+  border: none;
+  background: rgba(255, 255, 255, .4);
+  backdrop-filter: blur(2rem);
+  pointer-events: none;
+}
+
+/* stats */
+
+#stats-wrap{
+  height: auto;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.inf {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(2rem);
+  border-radius: 2rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#progress-container {
+  position: relative;
+  width: 15rem;
+  aspect-ratio: 1;
+}
+#progress-container svg {
+  width: 100%;
+  height: 100%;
+}
+.value {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; 
+}
+.variable{
+  color: var(--label);
+}
+#circle-bg,
+.progress {
+  fill: none;
+  stroke-width: 12;
+}
+.num{
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+#circle-bg {
+  opacity: 0.08;
+  stroke: var(--label);
+  z-index: 1;
+}
+.progress {
+  stroke: var(--accent);
+  stroke-linecap: round;
+}
+.digit {
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Roboto Mono", monospace;
+}
+.icon{
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+/* form */
+
+form {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.input{
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  word-break: break-all;
+  line-height: 1.5;
+  border: none;
+  font-size: 1.8rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+#label{
+  background: transparent;
+  color: gray;
+  z-index: 1;
+}
+#txt-area{
+  caret-color: gray;
+  outline: none;
+  color: black;
+  background: transparent;
+  z-index: 99;
+  color: transparent;
+}
+.correct {
+  color: black;
+  background: linear-gradient(180deg, transparent, transparent, transparent, transparent, green);
+}
+.wrong {
+  color: #000;
+  background: linear-gradient(180deg, transparent, transparent, transparent, transparent, red);
+}
+
+/* difficulty */
+#level-wrap{
+  position: relative;
+  padding: 2rem;
+  height: 25rem;
+}
+
+.level{
+  font-size: 1.8rem;
+  background: transparent;
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem;
+  position: relative;
+  outline: none;
+  z-index: 3;
+}
+#level-container{
+  position: relative;
+}
+
+#slider-level{
+  top: 0;
+  position: absolute;
+  height: 4rem;
+  left: 0;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 1.5rem;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+/* line */
+
+#line-wrap{
+  margin: 0;
+  padding: 2rem;
+}
+#line-container{
+  position: relative;
+}
+.line{
+  font-size: 1.8rem;
+  z-index: 3;
+  aspect-ratio: 2/1;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  background: transparent;
+  outline: none;
+}
+#slider-lines{
+  top: 0;
+  position: absolute;
+  width: calc(100% / 5);
+  left: 0;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 1.5rem;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+@media (max-width: 624px) {
+  .section{
+    min-height: 5vh;
+  }
+  html{
+    font-size: 8px;
+  }
+}
+@media (orientation: portrait){
+  .section{
+    min-height: 5vh;
+  }
+}
+@media (min-width: 1024px){
+  html{
+    font-size: 16px;
+  }
+}
