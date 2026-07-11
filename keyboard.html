@@ -1,1 +1,38 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KeyVis — Keyboard Visualizer</title>
+  <link rel="stylesheet" href="css/raw.css">
+  <link rel="stylesheet" href="css/rawKb.css">
+  <link rel="stylesheet" href="css/realKb.css">
+  <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+  
+  <div class="header">
+    <div class="logo-dot"></div>
+    <div class="header-title">Key<span>Vis</span> &nbsp;·&nbsp; Keyboard Visualizer</div>
+  </div>
+  
+  <div class="kb-wrap">
+    <svg id="kb" viewBox="0 0 1300 540"></svg>
+  </div>
+  
+  <div class="status-bar">
+    <div class="status-item">
+      <div class="status-dot live"></div>
+      Listening
+    </div>
+    <div class="status-item">
+      <div class="status-dot"></div>
+      Click to activate audio
+    </div>
+    <div class="last-key" id="lastKeyDisplay">Last key: <span>—</span></div>
+  </div>
+  <script src="js/variable.js"></script>
+  <script src="js/rawKb.js"></script>
+  <script src="js/kbFunctions.js"></script>
+</body>
+</html>
