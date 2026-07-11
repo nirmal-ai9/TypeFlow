@@ -1,1 +1,43 @@
+/* header */
 
+#typeflow{
+  transition: 0.5s;
+  margin: 3rem;
+}
+h1 {
+  font-size: 5rem;
+}
+
+#heading-p-wrap{
+  display: flex;
+}
+#heading-p{
+  font-size: 2rem;
+}
+
+/* section 1  */
+.info{
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 2rem;
+  font-size: 1.5rem;
+  background: #f2f2f2;
+}
+#visual{
+  color: var(--accent);
+}
+.description{
+  text-align: center;
+}
+#btn-wrap{
+  transition: 1s;
+  width: 100%;
+}
+#btn-kb{
+  background: transparent;
+  width: 100%;
+  outline: none;
+  border: none;
+  opacity: 1;
+  padding: 0;
+}
