@@ -77,10 +77,15 @@ TypeFlow/
 ├── keyboard.html
 │
 ├── css/
-│   ├── global.css
+|   ├── animation.css
+|   ├── gridFlex.css 
+|   ├── previewKb.css 
+|   ├── rawKb.css
+|   ├── realKb.css
+│   ├── raw.css
 │   ├── sectionOne.css
-│   ├── sectionTwo.css
-│   └── keyboard.css
+│   └── sectionTwo.css
+│
 │
 ├── js/
 │   ├── variable.js
