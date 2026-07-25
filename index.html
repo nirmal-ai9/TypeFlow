@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/gridFlex.css">
   <link rel="stylesheet" href="css/sectionOne.css">
   <link rel="stylesheet" href="css/sectionTwo.css">
+  <link rel="stylesheet" href="css/sectionThree.css">
   <link rel="stylesheet" href="css/animation.css">
 </head>
 
@@ -23,9 +24,10 @@
       <div id="typeflow" class="fade-up">
         <div id="heading-wrap">
           <h1>TYPEFLOW</h1>
-          <div id="heading-p-wrap"></div>
+          <div id="heading-p-wrap">
             <p id="heading-p">Improve your speed in typing arena.</p>
           </div>
+        </div>
       </div>
   
       <div id="kb-wrap" class="fade-up">
@@ -49,7 +51,7 @@
         
         
         <div id="btn-wrap" class="fade-up">
-          <button id="btn-kb" onclick="gotokb()">
+          <button id="btn-kb" tabindex="1" onclick="gotokb()">
             <div class="kb-wrap">
               <svg id="kb" viewBox="0 0 1300 540"></svg>
             </div>
@@ -66,7 +68,7 @@
         Begin typing to start the test. Focus on rhythm, accuracy, and consistency.
       </p>
     
-      <button id="refresh" class="fade-up">
+      <button tabindex="13" id="refresh" class="fade-up">
         <div id="svg-container" class="bg">
           <svg
             id="icon"
@@ -130,7 +132,6 @@
           <p class="digit"><span class="num" id="time">-</span> s</p>
         </div>
         
-        
         <div id="progress-container">
           <svg viewBox="0 0 180 180">
             <circle
@@ -157,7 +158,7 @@
       <div id="form-wrap" class="bg fade-up">
         <form>
           <label class="input" for="txt-area" id="label"></label>
-          <textarea class="input" id="txt-area"></textarea>
+          <textarea class="input" id="txt-area" tabindex="12" ></textarea>
         </form>
       </div>
       
@@ -167,11 +168,11 @@
         <p id="difficulty">Difficulty:</p>
           <div id="level-container">
             <div id="slider-level"></div>
-            <button class="level" id="easy">Easy</button>
-            <button class="level" id="normal">Normal</button>
-            <button class="level" id="medium">Medium</button>
-            <button class="level" id="hard">Hard</button>
-            <button class="level" id="extreme">Extreme</button>
+            <button class="level" tabindex="2" id="easy">Easy</button>
+            <button class="level" tabindex="3" id="normal">Normal</button>
+            <button class="level" tabindex="4" id="medium">Medium</button>
+            <button class="level" tabindex="5" id="hard">Hard</button>
+            <button class="level" tabindex="6" id="extreme">Extreme</button>
           </div>
       </div>
       
@@ -181,11 +182,11 @@
         <p id="line">Lines:</p>
         <div id="line-container">
           <div id="slider-lines"></div>
-          <button class="line" id="one">1</button>
-          <button class="line" id="two">2</button>
-          <button class="line" id="three">3</button>
-          <button class="line" id="four">4</button>
-          <button class="line" id="five">5</button>
+          <button class="line" tabindex="7" id="one">1</button>
+          <button class="line" tabindex="8" id="two">2</button>
+          <button class="line" tabindex="9" id="three">3</button>
+          <button class="line" tabindex="10" id="four">4</button>
+          <button class="line" tabindex="11"  id="five">5</button>
         </div>
       </div>
     </section>
