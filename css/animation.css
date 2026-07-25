@@ -1,6 +1,6 @@
 .fade-up {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(5rem);
   transition:
     opacity 0.8s ease,
     transform 0.8s ease;
@@ -13,11 +13,17 @@
 #icon, .inf{
   transition: transform .25s ease;
 }
-#refresh:hover {
-  transform: rotate(90deg);
+#refresh:hover #svg-container {
+  transform: translateY(-2px);
+}
+#refresh:hover #icon {
+  transform: rotate(180deg);
+}
+#refresh:active #svg-container {
+  transform: scale(.94);
 }
 .inf:hover {
-  transform: translateY(-4px);
+  transform: translateY(-0.4rem);
 }
 #progress-container svg{
   transform: rotate(-90deg);
@@ -41,7 +47,7 @@ form{
 }
 .fade-out.done{
   opacity: 0;
-  transform: translateY(-50px) scale(0.97);
+  transform: translateY(-5rem) scale(0.97);
 }
 
 .status-dot.live {
