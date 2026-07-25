@@ -1,6 +1,8 @@
 # ⌨️ TypeFlow
 
-TypeFlow is a modern, minimal, and responsive typing practice web application built using **HTML, CSS, and JavaScript**. It helps users improve typing speed and accuracy through multiple difficulty levels, paragraph lengths, and real-time statistics.
+A modern typing practice web application with a built-in interactive keyboard visualizer.
+
+TypeFlow helps users improve typing speed and accuracy while providing real-time statistics, customizable practice modes, and beautiful glassmorphism-inspired UI.
 
 ---
 
@@ -208,3 +210,9 @@ This project is open source and available under the MIT License.
 **Nirmal**
 
 GitHub: https://github.com/nirmal-ai9
+
+## ⭐ Support
+
+If you enjoyed TypeFlow, consider giving the repository a ⭐ on GitHub.
+
+It helps the project grow and motivates future updates.
