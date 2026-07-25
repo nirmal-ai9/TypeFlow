@@ -8,7 +8,8 @@
 }
 .bg{
   font-size: 1.8rem;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255,255,255,0.55);
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
   border: 1px solid rgba(255, 255, 255, 0.7);
@@ -44,14 +45,30 @@
   height: 100%;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.55),
+    rgba(255,255,255,.25)
+  );
+  backdrop-filter:blur(30px);
+  -webkit-backdrop-filter:blur(30px);
+  border:1px solid rgba(255,255,255,.6);
+  box-shadow:
+    inset 0 .1rem 0.1rem rgba(255,255,255,.8),
+    0 1rem 2.5rem rgba(0,0,0,.08);
+  transition:.25s;
 }
 #icon{
   width: 75%;
   height: 75%;
   border: none;
-  background: rgba(255, 255, 255, .4);
   backdrop-filter: blur(2rem);
   pointer-events: none;
+  width:55%;
+  height:55%;
+  color:#4b5563;
+  background: none;
+  transition: transform .35s;
 }
 
 /* stats */
@@ -62,11 +79,37 @@
   margin-bottom: 2rem;
 }
 .inf {
-  background: rgba(255, 255, 255, 0.45);
+  position: relative;
+  overflow: hidden;
+ background:
+  linear-gradient(
+      145deg,
+      rgba(255,255,255,0.55) 0%,
+      rgba(255,255,255,0.35) 45%,
+      rgba(240,244,255,0.25) 100%
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255,255,255,.55);
+  border-radius: 2.8rem;
+  box-shadow:
+    inset 0 0.1rem 0.1rem rgba(255,255,255,.85),
+    inset 0 -0.1rem 0.1rem rgba(255,255,255,.15),
+    0 1.2rem 3.5rem rgba(90,90,120,.12);
   backdrop-filter: blur(2rem);
-  border-radius: 2rem;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.inf::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+      180deg,
+      rgba(255,255,255,.45),
+      transparent 45%
+  );
+  pointer-events: none;
 }
 #progress-container {
   position: relative;
@@ -82,17 +125,21 @@
   inset: 0;
   pointer-events: none; 
 }
-.variable{
+.variable {
   color: var(--label);
+  font-size: 2rem;
+  font-weight: 600;
 }
 #circle-bg,
 .progress {
   fill: none;
   stroke-width: 12;
 }
-.num{
-  font-size: 2.2rem;
+.num {
+  font-size: 2.4rem;
+  font-weight: 700;
   color: var(--accent);
+  letter-spacing: -0.04em;
 }
 #circle-bg {
   opacity: 0.08;
@@ -100,6 +147,7 @@
   z-index: 1;
 }
 .progress {
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, .35));
   stroke: var(--accent);
   stroke-linecap: round;
 }
@@ -145,6 +193,9 @@ form {
   z-index: 99;
   color: transparent;
 }
+.input:focus{
+  border: 0.1rem solid black;
+}
 .correct {
   color: black;
   background: linear-gradient(180deg, transparent, transparent, transparent, transparent, green);
@@ -158,9 +209,11 @@ form {
 #level-wrap{
   position: relative;
   padding: 2rem;
-  height: 25rem;
+  height: 27rem;
 }
-
+#difficulty{
+  padding: 0 2rem;
+}
 .level{
   font-size: 1.8rem;
   background: transparent;
@@ -170,6 +223,13 @@ form {
   position: relative;
   outline: none;
   z-index: 3;
+}
+.level:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(0, 122, 255, .18),
+    inset 0 1px 1px rgba(255, 255, 255, .6);
+  color: #007AFF;
 }
 #level-container{
   position: relative;
@@ -181,10 +241,19 @@ form {
   height: 4rem;
   left: 0;
   width: 100%;
-  background: var(--accent);
   border-radius: 1.5rem;
   z-index: 1;
-  transition: 0.5s;
+  background:linear-gradient(
+    135deg,
+    #7f8cff,
+    #5d6cff
+  );
+  box-shadow:
+    0 8px 24px rgba(94,114,255,.35),
+    inset 0 1px 1px rgba(255,255,255,.4);
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    width .35s;
 }
 
 /* line */
@@ -206,15 +275,31 @@ form {
   background: transparent;
   outline: none;
 }
+.line:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(0, 122, 255, .18),
+    inset 0 1px 1px rgba(255, 255, 255, .6);
+  color: #007AFF;
+}
 #slider-lines{
   top: 0;
   position: absolute;
   width: calc(100% / 5);
   left: 0;
   height: 100%;
-  background: var(--accent);
+    background:linear-gradient(
+    135deg,
+    #7f8cff,
+    #5d6cff
+  );
+  box-shadow:
+    0 8px 24px rgba(94,114,255,.35),
+    inset 0 1px 1px rgba(255,255,255,.4);
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    width .35s;
   border-radius: 1.5rem;
-  z-index: 1;
   transition: 0.5s;
 }
 
