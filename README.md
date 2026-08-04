@@ -8,7 +8,7 @@ TypeFlow helps users improve typing speed and accuracy while providing real-time
 
 # Screenshot 
 
-## landing page :
+## Landing page :
 
 ## KEYVIS (A keyboard visualizer) : 
 
