@@ -193,9 +193,6 @@ form {
   z-index: 99;
   color: transparent;
 }
-.input:focus{
-  border: 0.1rem solid black;
-}
 .correct {
   color: black;
   background: linear-gradient(180deg, transparent, transparent, transparent, transparent, green);
