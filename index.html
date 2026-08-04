@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TypeFlow</title>
-  <meta name="description" content="Improve your typing speed and accuracy with TypeFlow.">
-  <meta name="keywords" content="typing, typing test, speed, accuracy, keyboard">
-  <meta name="author" content="Nirmal">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
   <link rel="stylesheet" href="css/raw.css">
   <link rel="stylesheet" href="css/rawKb.css">
   <link rel="stylesheet" href="css/previewKb.css">
@@ -194,9 +195,91 @@
       </div>
     </section>
     
+    <!-- section 3 -->
+    <section id="community" class="section fade-up">
+      <div id="code">
+        
+        <!-- upper part -->
+        
+        <div class="title-bar">
+          <div class="title">TypeFlow Community</div>
+          <div class="window-buttons">
+            <span class="red btn"></span>
+            <span class="yellow btn"></span>
+            <span class="green btn"></span>
+          </div>
+        </div>
+        
+        <!-- editor -->
+          <div class="editor">
+            <div class="line-numbers">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+              <span>15</span>
+              <span>16</span>
+              <span>17</span>
+              <span>18</span>
+              <span>19</span>
+              <span>20</span>
+              <span>21</span>
+              <span>22</span>
+            </div>
+            <div class="code"><pre><code class="language-javascript">  const numbers = [12, 7, 25, 9, 18, 30];
+  
+  function calculateAverage(values) {
+    const total = values.reduce((sum, value) => sum + value, 0);
+    return total / values.length;
+  }
+  
+  const average = calculateAverage(numbers);
+  
+  if (average > 15) {
+    console.log(`Average: ${average.toFixed(2)}`);
+  } else {
+    console.log("Average is too low.");
+  }
+  
+  console.log("Calculation complete.");</code>
+  
+  <span class="highlight-comment">> Wanna contribute?</span>
+  <span class="highlight-comment">> Report a bug?</span>
+  <span class="highlight-comment">> Have an awesome idea?</span><span class="cursor"></span></pre>
+  
+            <div id="logos">
+              <button id="discord"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOmWiRkMRb_DFkvscSwO4Bq89psVBDzJoq6AE5dXF5QbkTsOcEY3OhL2sH&s=10"></button>
+              <button id="git"><img src="git.png"></button>
+            </div>
+          </div>
+          </div>
+          
+        <!-- bottom -->
+        
+        <div class="status-bar">
+          <span>JavaScript</span>
+          <span>UTF-8</span>
+          <span>LF</span>
+          <span>Ln 16, Col 28</span>
+        </div>
+      </div>
+    </section>  
+    
   </main>
   <script src="js/paragraph.js"></script>
   <script src="js/variable.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
   <script src="js/rawKb.js"></script>
   <script src="js/settings.js"></script>
   <script src="js/index.js"></script>
