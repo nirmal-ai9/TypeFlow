@@ -12,8 +12,10 @@ TypeFlow helps users improve typing speed and accuracy while providing real-time
 ![Landing page](screenshots/landing-page.jpg)
 
 ## KEYVIS (A keyboard visualizer) : 
+![KEYVIS](screenshots/keyvis.jpg)
 
 ## Typing area :
+![Typing area](screenshots/typing-area.jpg)
 
 ---
 
