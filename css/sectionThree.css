@@ -1,1 +1,149 @@
+#community{
+  color: white;
+}
+#code *:focus{
+  outline: none;
+}
 
+/* upper part */
+
+#code{
+  height: 95vh;
+  width: 95%;
+  border-radius: 1.6rem;
+  background: #1e1e1e;
+  box-shadow: 0 2.5rem 6rem rgba(0,0,0,.4);
+}
+@media (orientation: portrait){
+  #code{
+    height: auto;
+  }
+}
+.title-bar{
+  border-radius: 1.6rem 1.6rem 0 0;
+  width: 100%;
+  height: 3.8rem;
+  background: #2a2a2a;
+  padding: 0 2rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+} 
+.title{
+  font-size: 1.6rem;
+}
+.btn{
+  transition: all .15s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  position: relative;
+}
+.btn:hover {
+  filter: brightness(.85);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, .18),
+    inset 0 1px 2px rgba(255, 255, 255, .2);
+}
+.red{background: #ff5f57;}
+.yellow{background: #febc2e;}
+.green{background: #28c840;}
+.btn::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  opacity: 0;
+  line-height: 1;
+  font-size: 1.2rem;
+  transition: opacity .15s ease;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.7);
+}
+.red::after {
+  content: "✕";
+}
+.yellow::after {
+  content: "−";
+}
+.green::after {
+  content: "⤢";
+}
+.btn:hover::after {
+  opacity: 1;
+}
+
+/* mid part */
+
+.editor{
+  overflow: auto;
+}
+pre, code{
+  font-family: "SF Mono", "JetBrains Mono", "Fira Code",
+    "Cascadia Code", Consolas, monospace;
+}
+.line-numbers{
+  height: 100%;
+  background: #202020;
+  width: 2rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+.code{
+  height: 100%;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  background: #1e1e1e;
+}
+pre[class*="language-"] {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+code[class*="language-"] {
+  line-height: inherit;
+  font-size: inherit;
+}
+pre[class*="language-"],
+code[class*="language-"] {
+  font-size: 1.4rem;
+  background: transparent !important;
+  text-shadow: none;
+}
+.highlight-comment {
+  color: #f2f2f2;
+  font-weight: 600;
+}
+#logos button{
+  border: none;
+  max-height: 4.2rem;
+  padding: 0;
+}
+#logos img{
+  margin: 0;
+  max-height: 4.2rem;
+}
+.cursor {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1.2em;
+  background: #ffffff;
+  vertical-align: text-bottom;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {opacity: 0;}
+}
+
+/* bottom part */
+
+.status-bar {
+  height: 3.8rem;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  background: #252526;
+  color: #b3b3b3;
+  font-size: 1.6rem;
+  border-radius: 0 0 1.6rem 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
