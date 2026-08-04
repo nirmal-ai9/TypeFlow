@@ -1,6 +1,15 @@
 document.getElementById("btn-kb").onclick =  function goToKb() {
   window.location.href = "keyboard.html"
 }
+document.getElementById("git").onclick = function goTogit() {
+  window.location.href = "https://github.com/nirmal-ai9/TypeFlow"
+}
+document.getElementById("discord").onclick = function goTodiscord() {
+  window.location.href = "https://discord.gg/dKa2wEJGF9"
+}
+
+
+circumference = 2 * Math.PI * 70;
 
 function getParagraphs() {
   const curruntLevel = localStorage.getItem("lastlevel");
@@ -25,12 +34,15 @@ function removeDefaultLayout() {
 }
 
 function changePara() {
+  circle.style.strokeDasharray = circumference;
+  circle.style.strokeDashoffset = circumference;
+
+  
   isUserStarted = false
   txt.disabled = false
   isCompleted = false
   
   txt.value = "";
-  [txt, lbl].forEach(el => el.style.border = "none");
   [lpm, accuracy, time, percent].forEach(el => {
     el.textContent = "-";
   });
@@ -46,13 +58,9 @@ function changePara() {
   .join("");
 }
 
-circumference = 2 * Math.PI * 70;
-circle.style.strokeDasharray = circumference;
-circle.style.strokeDashoffset = circumference;
-
 function stat() {
   const chars = lbl.querySelectorAll("span");
-  if (txt.value.length === 0) {
+  if (txt.value.length === 0 || txt.value.length > chars.length) {
     changePara()
     
   } else if (txt.value.length === 1 && isUserStarted === false ) {
