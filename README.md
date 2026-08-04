@@ -6,6 +6,16 @@ TypeFlow helps users improve typing speed and accuracy while providing real-time
 
 ---
 
+# Screenshot 
+
+## landing page :
+
+## KEYVIS (A keyboard visualizer) : 
+
+## Typing area :
+
+---
+
 ## ✨ Features
 
 - 🎯 Five difficulty levels
