@@ -195,11 +195,13 @@ form {
 }
 .correct {
   color: black;
-  background: linear-gradient(180deg, transparent, transparent, transparent, transparent, green);
+  background: #22C55E33;
+  border-bottom: 0.3rem solid green;
 }
 .wrong {
   color: #000;
-  background: linear-gradient(180deg, transparent, transparent, transparent, transparent, red);
+  background: #EF444433;
+  border-bottom: 0.3rem solid red;
 }
 
 /* difficulty */
