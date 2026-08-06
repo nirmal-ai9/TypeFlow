@@ -28,7 +28,7 @@ Everyone is welcome. See you there!
 Clone the repository and open `index.html` in your browser.
 
 ```bash
-git clone https://github.com/your-username/TypeFlow.git
+git clone https://github.com/nirmal-ai9/TypeFlow.git
 cd TypeFlow
 ```
 
