@@ -1,10 +1,8 @@
-# ⌨️ TypeFlow
+# TypeFlow
 
-A modern typing practice web application with a built-in interactive keyboard visualizer.
+TypeFlow is a typing practice application designed to keep the experience simple, fast, and distraction-free. It measures your typing speed and accuracy in real time, allowing you to focus on improving rather than navigating a complicated interface.
 
-TypeFlow helps users improve typing speed and accuracy while providing real-time statistics, customizable practice modes, and beautiful glassmorphism-inspired UI.
-
----
+This project started as a way to learn frontend development, but gradually evolved into a complete application with multiple iterations, UI improvements, and performance optimizations. Every version has been an opportunity to experiment with new ideas while keeping the experience lightweight and enjoyable.
 
 # Screenshot 
 
@@ -17,225 +15,38 @@ TypeFlow helps users improve typing speed and accuracy while providing real-time
 ## Typing area :
 ![Typing area](screenshots/typing-area.jpg)
 
----
-
-## ✨ Features
-
-- 🎯 Five difficulty levels
-  - Easy
-  - Normal
-  - Medium
-  - Hard
-  - Extreme
-
-- 📄 Multiple paragraph lengths
-  - 1 line
-  - 2 lines
-  - 3 lines
-  - 4 lines
-  - 5 lines
-
-- ⚡ Real-time statistics
-  - Letters Per Minute (LPM)
-  - Accuracy
-  - Timer
-  - Progress indicator
-
-- 🎨 Character-by-character highlighting
-  - Correct characters
-  - Incorrect characters
-  - Current typing position
-
-- 💾 Automatically remembers
-  - Selected difficulty
-  - Selected paragraph length
-
-- 🔄 One-click paragraph refresh
-
-- ⌨️ Interactive keyboard visualizer
-  - Highlights pressed keys
-  - Supports modifier keys
-  - Plays keyboard click sounds
-
-- 📱 Fully responsive
-  - Mobile
-  - Tablet
-  - Laptop
-  - Desktop
-
-- ♿ Accessibility improvements
-  - Keyboard navigation
-  - Arrow key scrolling
-  - Prevents accidental page refresh during tests
-
-- 🚫 Fair typing mode
-  - Paste disabled
-  - Ctrl + V disabled
-
----
-
-## 🛠️ Built With
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- SVG
-
----
-
-## 📂 Project Structure
-
-```
-TypeFlow/
-│
-├── index.html
-├── keyboard.html
-│
-├── css/
-|   ├── animation.css
-|   ├── gridFlex.css 
-|   ├── previewKb.css 
-|   ├── rawKb.css
-|   ├── realKb.css
-│   ├── raw.css
-│   ├── sectionOne.css
-│   └── sectionTwo.css
-│
-│
-├── js/
-│   ├── variable.js
-│   ├── paragraph.js
-│   ├── settings.js
-│   ├── index.js
-│   ├── extra.js
-│   ├── rawKb.js
-│   └── kbFunctions.js
-│
-└── README.md
-```
-
----
-
-## 🚀 Getting Started
-
-Clone the repository.
-
-```bash
-git clone https://github.com/nirmal-ai9/TypeFlow.git
-```
-
-Open the project folder.
-
-```bash
-cd TypeFlow
-```
-
-Open `index.html` in your browser.
-
-No installation or dependencies are required.
-
----
-
-## 🎮 How to Use
-
-1. Select a difficulty.
-2. Select the paragraph length.
-3. Start typing.
-4. Monitor your:
-   - Speed
-   - Accuracy
-   - Progress
-   - Time
-5. Press Refresh to load another paragraph.
-
----
-
-## 🎯 Difficulty Levels
-
-| Level | Description |
-|--------|-------------|
-| Easy | Simple everyday sentences |
-| Normal | General English paragraphs |
-| Medium | Academic and technical text |
-| Hard | Advanced scientific and philosophical text |
-| Extreme | Highly technical and research-level content |
-
----
-
-## 📊 Statistics
-
-TypeFlow calculates:
-
-- Letters Per Minute (LPM)
-- Accuracy (%)
-- Time elapsed
-- Typing progress
-
-All statistics update in real time while typing.
-
----
-
-## 💡 Keyboard Visualizer
-
-The keyboard page includes:
-
-- Live key highlighting
-- Modifier key support
-- SVG keyboard rendering
-- Click sound effects
-- Last key pressed display
-
----
-
-## 📱 Responsive Design
-
-Optimized for:
-
-- 📱 Mobile
-- 📟 Tablet
-- 💻 Laptop
-- 🖥️ Desktop
-
----
-
-## 🌟 Future Plans
-
-- Words Per Minute (WPM)
-- User profiles
-- Dark and light themes
-- Custom paragraph mode
-- Typing history
-- Leaderboards
-- Achievements
-- Daily challenges
-- More typing modes
-
----
-
-## 📄 License
-
-This project is open source and available under the GPL v3.0 License.
-
----
-
-## 💬 Join Our Discord Community
+### Join Our Discord Community
 
 Have questions, ideas, or feedback? Join the Discord server to discuss projects, suggest features, report bugs, and connect with other developers.
 
 🔗 Discord: https://discord.gg/dKa2wEJGF9
 
-Everyone is welcome. See you there! 🚀
+Everyone is welcome. See you there!
 
----
+## Running the Project
 
-## 👨‍💻 Author
+Clone the repository and open `index.html` in your browser.
 
-**Nirmal**
+```bash
+git clone https://github.com/your-username/TypeFlow.git
+cd TypeFlow
+```
 
-GitHub: https://github.com/nirmal-ai9
+No installation or build tools are required.
 
-## ⭐ Support
+## Project Goals
 
-If you enjoyed TypeFlow, consider giving the repository a ⭐ on GitHub.
+- Make typing practice simple and accessible.
+- Provide real-time feedback without distractions.
+- Keep the project lightweight and easy to understand.
+- Continuously improve the interface and user experience.
 
-It helps the project grow and motivates future updates.
+## Contributing
+
+Contributions, suggestions, and bug reports are always welcome. Feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0). See the `LICENSE` file for more information.
+
+## Author : Nirmal
