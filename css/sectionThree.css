@@ -114,14 +114,15 @@ code[class*="language-"] {
   color: #f2f2f2;
   font-weight: 600;
 }
-#logos button{
-  border: none;
-  max-height: 4.2rem;
-  padding: 0;
+#logos svg{
+  height: 4.2rem;
+  width: 4.2rem;
 }
-#logos img{
+#logos button{
   margin: 0;
-  max-height: 4.2rem;
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 .cursor {
   display: inline-block;
