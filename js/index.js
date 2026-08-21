@@ -1,12 +1,6 @@
 document.getElementById("btn-kb").onclick =  function goToKb() {
   window.location.href = "keyboard.html"
 }
-document.getElementById("git").onclick = function goTogit() {
-  window.location.href = "https://github.com/nirmal-ai9/TypeFlow"
-}
-document.getElementById("discord").onclick = function goTodiscord() {
-  window.location.href = "https://discord.gg/dKa2wEJGF9"
-}
 
 
 circumference = 2 * Math.PI * 70;
