@@ -22,6 +22,15 @@
   align-items: center;
   justify-content: space-between;
 }
+.hero-actions {
+  display: flex;
+  align-items: center;
+}
+.btn-new{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .window-buttons {
   display: flex;
   gap: 0.8rem;
@@ -33,22 +42,20 @@
   flex: 1;
   display: flex;
 }
-.code{
-  flex: 1;
-}
-.line-numbers {
-  display: flex;
-  flex-direction: column;
+.hero{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-#logos {
-  flex-direction: row;
-  justify-content: space-evenly;
+.hero-gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* bottom part*/
 
-.status-bar {
+.status-bar, #nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
