@@ -9,7 +9,6 @@
 .bg{
   font-size: 1.8rem;
   background: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(255,255,255,0.55);
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
   border: 1px solid rgba(255, 255, 255, 0.7);
@@ -88,7 +87,6 @@
       rgba(255,255,255,0.35) 45%,
       rgba(240,244,255,0.25) 100%
   );
-  backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   border: 1px solid rgba(255,255,255,.55);
   border-radius: 2.8rem;
