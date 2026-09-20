@@ -14,7 +14,7 @@ txt.addEventListener("keydown", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.ctrlKey && e.key.toLowerCase() === "r") {
     e.preventDefault();
-    rans();
+    changePara();
   }
 });
 document.addEventListener("keydown", (e) => {
