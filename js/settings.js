@@ -35,18 +35,28 @@ if (!localStorage.getItem("lastlevel")) {
   setDefault("lastlevel", "easy", sliderLevel, "Y");
 }
 
-// moving slider
+// Responsive slider movement: difficulty is vertical on desktop and
+// horizontal on mobile/tablet. Re-evaluate on resize/orientation changes.
+const desktopDifficulty = window.matchMedia("(min-width: 901px)");
 
-function moveSlider(localName, direction, array, slider) {
-  const index = array.indexOf(localStorage.getItem(localName))
-  
-  if(index === -1) return
-  
-  slider.style.transform = `translate${direction}(${index * 100}%)` 
+function difficultyDirection() {
+  return desktopDifficulty.matches ? "Y" : "X";
 }
 
-moveSlider("lastlevel", "Y", levelName, sliderLevel)
-moveSlider("lastline", "X", lineName, sliderLine)
+function moveSlider(localName, direction, array, slider) {
+  const index = array.indexOf(localStorage.getItem(localName));
+  if (index === -1) return;
+  slider.style.transform = `translate${direction}(${index * 100}%)`;
+}
+
+function moveDifficultySlider() {
+  moveSlider("lastlevel", difficultyDirection(), levelName, sliderLevel);
+}
+
+moveDifficultySlider();
+moveSlider("lastline", "X", lineName, sliderLine);
+desktopDifficulty.addEventListener("change", moveDifficultySlider);
+window.addEventListener("resize", moveDifficultySlider, { passive: true });
 
 if (["hard", "extreme"].includes(localStorage.getItem("lastlevel"))) updateLineLayout(localStorage.getItem("lastlevel"))
 
@@ -55,8 +65,8 @@ if (["hard", "extreme"].includes(localStorage.getItem("lastlevel"))) updateLineL
 buttonLevel.forEach((btn, i) => {
   btn.addEventListener("click", () => {
     localStorage.setItem("lastlevel", btn.id);
-    moveSlider("lastline", "X", lineName, sliderLine)
-    moveSlider("lastlevel", "Y", levelName, sliderLevel)
+    moveSlider("lastline", "X", lineName, sliderLine);
+    moveDifficultySlider();
     updateLineLayout(btn.id);
     if(btn.id === "hard" && localStorage.getItem("lastline") === "five"){
       setDefault("lastline", "one", sliderLine, "X");
@@ -73,7 +83,7 @@ buttonLine.forEach((btn, i) => {
   btn.addEventListener("click", () => {
     localStorage.setItem("lastline", btn.id)
     updateLineLayout(localStorage.getItem("lastlevel"));
-    moveSlider("lastline", "X", lineName, sliderLine)
-    moveSlider("lastlevel", "Y", levelName, sliderLevel)
+    moveSlider("lastline", "X", lineName, sliderLine);
+    moveDifficultySlider();
   });
 });
